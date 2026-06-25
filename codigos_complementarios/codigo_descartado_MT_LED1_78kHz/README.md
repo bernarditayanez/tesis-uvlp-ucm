@@ -2,6 +2,6 @@
 
 Esta carpeta contiene una versión preliminar del análisis Multitaper aplicado al LED 1.
 
-Este código fue descartado del flujo principal porque entregaba una frecuencia candidata cercana a 78 kHz, la cual no fue considerada representativa del LED 1 al contrastarla con los resultados obtenidos mediante Periodograma, Welch y la revisión local posterior mediante Multitaper.
+El código se conserva como respaldo metodológico, ya que permitió identificar una frecuencia candidata cercana a 78 kHz. Sin embargo, dicha candidata fue descartada del flujo principal al contrastarse con los resultados obtenidos mediante Periodograma, Welch y la revisión Multitaper local final.
 
-Se conserva únicamente como respaldo metodológico para documentar el proceso de depuración y selección del procedimiento final.
+Este script no corresponde al resultado final reportado para el LED 1.
