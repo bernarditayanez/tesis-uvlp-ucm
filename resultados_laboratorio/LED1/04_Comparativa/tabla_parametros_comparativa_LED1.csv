@@ -1,0 +1,2 @@
+fc_ref_Hz,fc_ref_kHz,tolerancia_abs_Hz,tolerancia_abs_kHz,fc_promedio_Hz,fc_promedio_kHz,fc_min_Hz,fc_max_Hz,rango_frecuencias_kHz,variacion_max_pct,criterio_dB
+56400,56.4,2000,2,57044.6197424583,57.0446197424583,56285.6941859677,57704.0000023447,1.41830581637697,2.48630952889205,3
