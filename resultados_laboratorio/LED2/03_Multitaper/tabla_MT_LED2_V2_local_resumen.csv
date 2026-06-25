@@ -1,0 +1,2 @@
+fc_ref_Hz,fc_ref_kHz,ancho_local_Hz,fmin_local_Hz,fmax_local_Hz,fc_local_Hz,fc_local_kHz,score_local_dB,ON_dB,OFF_dB,rep_positivas_0dB,rep_positivas_3dB,rep_totales,umbral_repetibilidad_dB,ventana_repetibilidad_Hz,NW,NFFT,df_grilla_Hz
+45375,45.375,1000,44375,46375,44821,44.8214125656025,6.88257713776835,-129.84912940314,-136.731706540909,4,4,4,3,200,2.5,2800001,3.57142729606394
