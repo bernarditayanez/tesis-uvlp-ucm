@@ -1,0 +1,7 @@
+Metodo,LED,score_dB,rep_3dB,rep_total,err_kHz,supera_3dB,rep_minima,dentro_tolerancia,valido_final
+Periodograma,LED 1,19.1754,3,4,0.894999999999996,Si,Si,Si,Si
+Periodograma,LED 2,17.0419,4,4,0.132999999999996,Si,Si,Si,Si
+Welch,LED 1,4.56705384824076,2,4,0.0971074218750019,Si,Si,Si,Si
+Welch,LED 2,4.64684828177625,2,4,0.465703369140599,Si,Si,Si,Si
+Multitaper,LED 1,3.78948747569248,2,4,0.430274475097598,Si,Si,Si,Si
+Multitaper,LED 2,3.60809302458823,2,4,0.302148223876905,Si,Si,Si,Si

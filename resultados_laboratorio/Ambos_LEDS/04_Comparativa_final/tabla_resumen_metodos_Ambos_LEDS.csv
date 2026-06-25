@@ -1,0 +1,4 @@
+Metodo,score_prom_dB,score_min_dB,err_prom_kHz,err_max_kHz,rep3_total,Comentario
+Periodograma,18.10865,17.0419,0.513999999999996,0.894999999999996,7,"Mayor score ON-OFF; ambos LEDs cumplen frecuencia y criterio."
+Welch,4.6069510650085,4.56705384824076,0.2814053955078,0.465703369140599,4,"Score menor por suavizado, pero ambos LEDs quedan validados."
+Multitaper,3.69879025014035,3.60809302458823,0.366211349487251,0.430274475097598,4,"Ambos LEDs validos, con margen mas justo sobre 3 dB."
