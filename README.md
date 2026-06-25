@@ -22,7 +22,7 @@ Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen dire
 
 Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen en este repositorio debido a su tamaño. Estos archivos se encuentran disponibles en:
 
-ENLACE_DRIVE_O_ONEDRIVE
+[ENLACE_DRIVE](https://drive.google.com/drive/folders/12-3iKfvaBkIH_hp0NsVCcrXfb7bPhxMP?usp=sharing)
 
 Para ejecutar los scripts, se deben descargar los datos crudos y modificar las variables de ruta indicadas al inicio de cada archivo MATLAB.
 
