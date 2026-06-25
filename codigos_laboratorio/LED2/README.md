@@ -10,3 +10,5 @@ Orden de ejecución:
 4. LED2_04_comparativa_local_45kHz.m
 
 Los tres primeros scripts generan resultados individuales mediante Periodograma, Welch y Multitaper. El cuarto script realiza la comparación final entre métodos, por lo que debe ejecutarse después de los anteriores.
+
+Los archivos .mat y .fig no se incluyen en GitHub debido a su tamaño. Estos archivos pueden generarse nuevamente ejecutando los scripts correspondientes.
