@@ -12,22 +12,23 @@ Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen dire
 
 - codigos_laboratorio/LED1: scripts MATLAB para el análisis individual del LED 1.
 - codigos_laboratorio/LED2: scripts MATLAB para el análisis individual del LED 2.
-- codigos_laboratorio/Ambos_LEDS: scripts MATLAB para el análisis simultáneo de ambos LED.
+- codigos_laboratorio/Ambos_LEDS: scripts MATLAB para el análisis simultáneo de ambos LEDS.
 - resultados_laboratorio/LED1: tablas y figuras del LED 1.
 - resultados_laboratorio/LED2: tablas y figuras del LED 2.
 - resultados_laboratorio/Ambos_LEDS: tablas y figuras del análisis simultáneo.
-- 
-
-## Orden general de ejecución
-
-1. Ejecutar los scripts individuales de Periodograma, Welch y Multitaper.
-2. Ejecutar el script comparativo correspondiente.
-3. Verificar las rutas locales indicadas al inicio de cada script.
+- codigos_complementarios: códigos de apoyo metodológico y versiones descartadas documentadas.
 
 ## Datos crudos
 
-Los datos crudos se encuentran disponibles en:
+Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen en este repositorio debido a su tamaño. Estos archivos se encuentran disponibles en:
 
 ENLACE_DRIVE_O_ONEDRIVE
 
-Para ejecutar los scripts, descargar los datos y modificar las variables de ruta al inicio de cada archivo MATLAB.
+Para ejecutar los scripts, se deben descargar los datos crudos y modificar las variables de ruta indicadas al inicio de cada archivo MATLAB.
+
+## Orden general de ejecución
+
+1. Descargar los datos crudos desde la carpeta de almacenamiento en la nube.
+2. Modificar las rutas locales al inicio de cada script MATLAB.
+3. Ejecutar los scripts individuales de Periodograma, Welch y Multitaper.
+4. Ejecutar los scripts comparativos correspondientes.
