@@ -1,0 +1,128 @@
+clear; clc; close all;
+
+%% Parámetros de la señal de ejemplo
+fs = 10000;              % Frecuencia de muestreo [Hz]
+T = 1;                   % Duración [s]
+t = 0:1/fs:T-1/fs;       % Vector de tiempo
+f0 = 1000;               % Frecuencia de la señal senoidal [Hz]
+
+% Señal senoidal + ruido
+x = 0.8*sin(2*pi*f0*t) + 0.02*randn(size(t));
+
+%% Colores
+c_per   = [0 0.4470 0.7410];   % azul
+c_welch = [1 0 0];             % rojo
+c_mt    = [0 0.9 0];             % verde
+
+%% ---------------------------
+% 1) PERIODOGRAMA / FFT
+%% ---------------------------
+[pxx_per, f_per] = periodogram(x, [], [], fs);
+pxx_per_db = 10*log10(pxx_per);
+
+figure;
+plot(f_per, pxx_per_db, 'Color', c_per, 'LineWidth', 1.2); hold on;
+xline(f0, '--k', 'LineWidth', 1.2);
+text(f0+25, -105, 'f_0 = 1000 Hz', ...
+    'Rotation', 90, ...
+    'FontSize', 11, ...
+    'Color', [0 0 0], ...
+    'VerticalAlignment', 'bottom');
+
+grid on;
+xlim([0 3000]);
+ylim([-120 0]);
+xlabel('Frecuencia [Hz]', 'FontSize', 14);
+ylabel('PSD [dB/Hz]', 'FontSize', 14);
+title('Ejemplo conceptual mediante Periodograma/FFT', ...
+    'FontSize', 20, 'FontWeight', 'bold');
+legend('Periodograma/FFT', 'Location', 'northeast', 'FontSize', 13, 'Box', 'on');
+set(gca, 'FontSize', 13);
+
+%% ---------------------------
+% 2) WELCH
+%% ---------------------------
+[pxx_welch, f_welch] = pwelch(x, hamming(512), 256, 1024, fs);
+pxx_welch_db = 10*log10(pxx_welch);
+
+figure;
+plot(f_welch, pxx_welch_db, 'Color', c_welch, 'LineWidth', 1.8); hold on;
+xline(f0, '--k', 'LineWidth', 1.2);
+text(f0+25, -105, 'f_0 = 1000 Hz', ...
+    'Rotation', 90, ...
+    'FontSize', 11, ...
+    'Color', [0 0 0], ...
+    'VerticalAlignment', 'bottom');
+
+grid on;
+xlim([0 3000]);
+ylim([-120 0]);
+xlabel('Frecuencia [Hz]', 'FontSize', 14);
+ylabel('PSD [dB/Hz]', 'FontSize', 14);
+title('Ejemplo conceptual mediante Welch', ...
+    'FontSize', 20, 'FontWeight', 'bold');
+legend('Welch', 'Location', 'northeast', 'FontSize', 13, 'Box', 'on');
+set(gca, 'FontSize', 13);
+
+%% ---------------------------
+% 3) MULTITAPER
+%% ---------------------------
+[pxx_mt, f_mt] = pmtm(x, 4, 1024, fs);
+pxx_mt_db = 10*log10(pxx_mt);
+
+figure;
+plot(f_mt, pxx_mt_db, 'Color', c_mt, 'LineWidth', 1.8); hold on;
+xline(f0, '--k', 'LineWidth', 1.2);
+text(f0+25, -105, 'f_0 = 1000 Hz', ...
+    'Rotation', 90, ...
+    'FontSize', 11, ...
+    'Color', [0 0 0], ...
+    'VerticalAlignment', 'bottom');
+
+grid on;
+xlim([0 3000]);
+ylim([-120 0]);
+xlabel('Frecuencia [Hz]', 'FontSize', 14);
+ylabel('PSD [dB/Hz]', 'FontSize', 14);
+title('Ejemplo conceptual mediante Multitaper', ...
+    'FontSize', 20, 'FontWeight', 'bold');
+legend('Multitaper', 'Location', 'northeast', 'FontSize', 13, 'Box', 'on');
+set(gca, 'FontSize', 13);
+
+%% ---------------------------
+% 4) GRÁFICA COMPLETA
+%% ---------------------------
+figure;
+h1 = plot(f_per, pxx_per_db, 'Color', c_per, 'LineWidth', 1.1); hold on;
+h2 = plot(f_welch, pxx_welch_db, 'Color', c_welch, 'LineWidth', 1.8);
+h3 = plot(f_mt, pxx_mt_db, 'Color', c_mt, 'LineWidth', 1.8);
+
+xline(f0, '--k', 'LineWidth', 1.2);
+text(f0+25, -105, 'f_0 = 1000 Hz', ...
+    'Rotation', 90, ...
+    'FontSize', 11, ...
+    'Color', [0 0 0], ...
+    'VerticalAlignment', 'bottom');
+
+grid on;
+xlim([0 3000]);
+ylim([-120 0]);
+xlabel('Frecuencia [Hz]', 'FontSize', 16);
+ylabel('PSD [dB/Hz]', 'FontSize', 16);
+title('Ejemplo conceptual de análisis espectral con señal senoidal', ...
+    'FontSize', 22, 'FontWeight', 'bold');
+
+legend([h1 h2 h3], {'Periodograma/FFT', 'Welch', 'Multitaper'}, ...
+    'Location', 'northeast', ...
+    'FontSize', 14, ...
+    'Box', 'on');
+
+set(gca, 'FontSize', 14);
+
+%% ---------------------------
+% OPCIONAL: GUARDAR FIGURAS
+%% ---------------------------
+ saveas(1, 'periodograma_fft.png');
+ saveas(2, 'welch.png');
+% saveas(3, 'multitaper.png');
+% saveas(4, 'comparacion_completa.png');
