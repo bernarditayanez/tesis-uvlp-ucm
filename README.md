@@ -16,8 +16,14 @@ Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen dire
 - `resultados_laboratorio/LED1`: tablas y figuras del LED 1 en laboratorio.
 - `resultados_laboratorio/LED2`: tablas y figuras del LED 2 en laboratorio.
 - `resultados_laboratorio/Ambos_LEDS`: tablas y figuras del análisis simultáneo en laboratorio.
-- `codigos_terreno`: scripts MATLAB para el análisis espectral de las mediciones realizadas en terreno.
-- `resultados_terreno`: tablas y figuras obtenidas a partir del análisis de terreno.
+- `codigos_terreno/P1_LED1`: scripts MATLAB para el análisis individual del punto P1 y LED 1 en terreno.
+- `codigos_terreno/P2_LED2`: scripts MATLAB para el análisis individual del punto P2 y LED 2 en terreno.
+- `codigos_terreno/P3_LED3`: scripts MATLAB para el análisis individual del punto P3 y LED 3 en terreno.
+- `codigos_terreno/Comparativas`: scripts MATLAB para las comparativas entre LEDS evaluados en terreno.
+- `resultados_terreno/P1_LED1`: tablas y figuras del punto P1 y LED 1 en terreno.
+- `resultados_terreno/P2_LED2`: tablas y figuras del punto P2 y LED 2 en terreno.
+- `resultados_terreno/P3_LED3`: tablas y figuras del punto P3 y LED 3 en terreno.
+- `resultados_terreno/Comparativas`: tablas y figuras de las comparativas realizadas en terreno.
 - `codigos_complementarios`: códigos de apoyo metodológico y versiones descartadas documentadas.
 
 ## Datos crudos
