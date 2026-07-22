@@ -1,0 +1,2 @@
+punto,led,metodo,f_ref_periodograma_kHz,semiancho_local_kHz,fc_detectada_kHz,score_dB,ON_prom_dB,OFF_prom_dB,rep_positivas,rep_3dB,rep_totales,criterio_dB,supera_3dB,NW,NFFT,df_Hz
+P3,LED terreno 3,Multitaper,57.658,1,57.1727752685547,4.02785414328172,-132.132848312165,-136.160702455447,3,3,3,3,Si,2.5,1048576,47.6837158203125
