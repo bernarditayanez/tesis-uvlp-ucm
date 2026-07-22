@@ -1,20 +1,16 @@
 # Resultados de terreno
 
-Figuras y tablas generadas a partir de los scripts MATLAB de la etapa de terreno.
+Esta carpeta contiene los resultados obtenidos a partir del análisis espectral de las mediciones realizadas en terreno.
 
 ## Estructura
 
-- P1_LED1: resultados del punto P1 asociado al LED terreno 1.
-- P2_LED2: resultados del punto P2 asociado al LED terreno 2.
-- P3_LED3: resultados del punto P3 asociado al LED terreno 3.
-- Comparativas: resultados comparativos entre métodos y puntos de medición.
+- `P1_LED1`: resultados asociados al punto P1 y LED 1.
+- `P2_LED2`: resultados asociados al punto P2 y LED 2.
+- `P3_LED3`: resultados asociados al punto P3 y LED 3.
+- `Comparativas`: resultados del análisis comparativo entre puntos y LEDS evaluados en terreno.
 
-## Resultados
+## Contenido general
 
-Cada punto considera resultados obtenidos mediante:
+Las carpetas incluyen tablas, figuras y archivos generados por los scripts MATLAB de la etapa de terreno.
 
-1. Periodograma
-2. Welch
-3. Multitaper
-
-Las comparativas se almacenan en una carpeta independiente.
+Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen en GitHub debido a su tamaño.
