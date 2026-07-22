@@ -1,0 +1,2 @@
+punto,led,metodo,fc_detectada_kHz,score_dB,ON_prom_dB,OFF_prom_dB,rep_0dB,rep_3dB,rep_total,criterio_dB,umbral_repeticiones,supera_3dB
+P2,LED terreno 2,Periodograma,40.6230000016506,19.8125109521512,-127.307721280341,-147.120232232492,3,3,3,3,3,Si
