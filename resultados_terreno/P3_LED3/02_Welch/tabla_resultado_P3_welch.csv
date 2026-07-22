@@ -1,0 +1,2 @@
+punto,led,metodo,f_ref_kHz,ventana_kHz,fc_detectada_kHz,score_dB,ON_prom_dB,OFF_prom_dB,rep_positivas,rep_3dB,rep_totales,criterio_dB,supera_3dB
+P3,LED terreno 3,Welch,57.658,0.35,57.3635101318359,1.32884698036406,-134.373236412655,-135.702083393019,2,0,3,3,No
