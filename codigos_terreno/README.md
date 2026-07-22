@@ -1,20 +1,24 @@
 # Códigos de terreno
 
-Scripts MATLAB utilizados para el análisis espectral de las señales adquiridas en terreno.
+Esta carpeta contiene los scripts MATLAB utilizados para el análisis espectral de las mediciones realizadas en terreno.
 
 ## Estructura
 
-- P1_LED1: análisis del punto P1 asociado al LED terreno 1.
-- P2_LED2: análisis del punto P2 asociado al LED terreno 2.
-- P3_LED3: análisis del punto P3 asociado al LED terreno 3.
-- Comparativas: scripts de comparación entre métodos y puntos de medición.
+- `P1_LED1`: scripts MATLAB asociados al punto P1 y LED 1.
+- `P2_LED2`: scripts MATLAB asociados al punto P2 y LED 2.
+- `P3_LED3`: scripts MATLAB asociados al punto P3 y LED 3.
+- `Comparativas`: scripts MATLAB utilizados para el análisis comparativo entre puntos y LEDS evaluados en terreno.
 
-## Métodos principales
+## Métodos utilizados
 
-Cada punto de medición considera tres scripts principales:
+En la etapa de terreno se utilizaron tres métodos de análisis espectral:
 
-1. Periodograma
-2. Welch
-3. Multitaper
+- Periodograma.
+- Welch.
+- Multitaper.
 
-Las comparativas se desarrollan en una carpeta independiente.
+## Ejecución
+
+Antes de ejecutar cada script, se deben modificar las rutas locales indicadas al inicio de cada archivo MATLAB.
+
+Los archivos CSV originales no se incluyen en este repositorio debido a su tamaño.
