@@ -1,16 +1,22 @@
 # Comparativas de terreno
 
-Scripts MATLAB para la comparación de resultados obtenidos en terreno.
+Esta carpeta contiene los scripts MATLAB utilizados para el análisis comparativo de las mediciones realizadas en terreno.
 
-## Contenido
+## Orden de ejecución
 
-Esta carpeta reúne los códigos destinados a comparar:
+1. `T10_P1_comparativa_LED1_LED2_terreno.m`
+2. `T11_P2_comparativa_LED1_LED2_LED3_terreno.m`
+3. `T12_P3_comparativa_LED2_LED3_terreno.m`
+4. `T13_resumen_comparativo_global_terreno.m`
 
-- métodos espectrales aplicados en cada punto;
-- frecuencias características obtenidas;
-- resultados entre puntos de medición;
-- coherencia de detección entre Periodograma, Welch y Multitaper.
+Los scripts T10, T11 y T12 comparan los LEDS evaluados en cada punto de medición. El script T13 reúne los resultados principales de las comparativas de terreno.
 
-## Archivos
+## Datos de entrada
 
-Los scripts de esta carpeta utilizan como entrada las tablas y resultados generados en las carpetas individuales de cada punto.
+Los scripts utilizan los archivos ON correspondientes a cada punto de medición y los archivos OFF comunes de terreno.
+
+Los archivos CSV originales no se incluyen en GitHub debido a su tamaño.
+
+## Ejecución
+
+Antes de ejecutar cada script, se deben modificar las rutas locales indicadas al inicio del archivo MATLAB.
