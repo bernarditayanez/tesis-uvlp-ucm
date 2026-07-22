@@ -1,0 +1,3 @@
+punto,metodo,rol_metodo,modo_evaluacion,led_evaluado,tipo_led,f_ref_kHz,f_evaluada_kHz,delta_kHz,semiancho_busqueda_kHz,score_dB,ON_prom_dB,OFF_prom_dB,rep_0dB,rep_3dB,rep_total,criterio_dB,supera_3dB,interpretacion,score_rep1_dB,score_rep2_dB,score_rep3_dB
+P1,Multitaper,Complementario,Busqueda local,LED 1,Principal en P1,45.642,45.3472137451172,-0.294786254882816,1,4.52526691563711,-132.421987527392,-136.947254443029,3,3,3,3,Si,Confirmado,5.76424364634374,6.70546825291743,4.1103120435379
+P1,Multitaper,Complementario,Busqueda local,LED 2,Influencia secundaria esperada,40.623,39.6251678466797,-0.99783215332031,1,4.50749232484324,-133.257271738843,-137.764764063687,3,2,3,3,No,Indicio parcial,4.92892046926391,2.00074053931223,6.70042018015064
