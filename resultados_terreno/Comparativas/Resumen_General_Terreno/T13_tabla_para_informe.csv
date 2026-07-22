@@ -1,0 +1,8 @@
+punto,led_evaluado,tipo_led,score_periodograma_dB,estado_periodograma,score_welch_dB,estado_welch,score_multitaper_dB,estado_multitaper,decision_final
+P1,LED 1,Principal en P1,4.40913357895915,Indicio parcial,3.5845608862751,Confirmado,4.52526691563711,Confirmado,Confirmacion complementaria sin Periodograma
+P1,LED 2,Influencia secundaria esperada,-0.44265953701003,No confirmado,2.44815142136799,Indicio debil,4.50749232484324,Indicio parcial,Indicio de influencia secundaria
+P2,LED 1,Influencia secundaria esperada,9.80062698401057,Confirmado,2.154931550417,Indicio debil,3.45067042125875,Confirmado,Influencia secundaria confirmada
+P2,LED 2,Principal en P2,12.3486828660721,Confirmado,1.83832426015424,Indicio debil,3.40244285694062,Confirmado,LED principal confirmado
+P2,LED 3,Influencia secundaria esperada,11.3694360873065,Confirmado,1.53040478773203,Indicio debil,3.02671166883296,Indicio parcial,Influencia secundaria con apoyo parcial
+P3,LED 2,Influencia secundaria esperada,12.6542930650746,Confirmado,1.90219715329965,Indicio debil,3.01079780580585,Indicio parcial,Influencia secundaria con apoyo parcial
+P3,LED 3,Principal en P3,11.7466582717182,Confirmado,1.32884698036406,Indicio debil,4.02785414328172,Confirmado,LED principal confirmado
