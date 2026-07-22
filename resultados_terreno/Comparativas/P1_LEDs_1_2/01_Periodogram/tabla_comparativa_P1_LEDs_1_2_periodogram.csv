@@ -1,0 +1,3 @@
+punto,metodo,rol_metodo,modo_evaluacion,led_evaluado,tipo_led,f_ref_kHz,f_evaluada_kHz,delta_kHz,semiancho_busqueda_kHz,score_dB,ON_prom_dB,OFF_prom_dB,rep_0dB,rep_3dB,rep_total,criterio_dB,supera_3dB,interpretacion,score_rep1_dB,score_rep2_dB,score_rep3_dB
+P1,Periodograma,Principal,Referencia fija,LED 1,Principal en P1,45.642,45.64,-0.00200000000000244,0,4.40913357895915,-134.679545052088,-139.088678631047,2,2,3,3,No,Indicio parcial,7.11418625436102,-1.47429734187295,7.5875118243894
+P1,Periodograma,Principal,Referencia fija,LED 2,Influencia secundaria esperada,40.623,40.625,0.00200000000000244,0,-0.44265953701003,-136.025247260188,-135.582587723178,1,0,3,3,No,No confirmado,1.91738964509346,-0.625016025555482,-2.62035223056807
