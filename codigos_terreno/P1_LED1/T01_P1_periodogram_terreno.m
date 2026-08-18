@@ -20,7 +20,7 @@ close all;
 
 %% 1. Configuracion
 
-carpeta_base = 'C:\Users\mudrood\Desktop\Modulo Prof\Archivos Tesis\Toma de Datos\Pruebas en terreno';
+carpeta_base = 'C:\Users\berni\OneDrive\Escritorio\Modulo Prof\Archivos Tesis\Toma de Datos\Pruebas en terreno';
 
 carpeta_ON  = fullfile(carpeta_base, 'Terreno_ON_M1');
 carpeta_OFF = fullfile(carpeta_base, 'Terreno_OFF');
@@ -748,13 +748,14 @@ end
 
 function guardar_png(fig, carpeta_salida, nombre_archivo)
 
-    archivo_png = fullfile(carpeta_salida, [nombre_archivo '.png']);
+    archivo_png = fullfile(carpeta_salida, [nombre_archivo, '.png']);
+    archivo_fig = fullfile(carpeta_salida, [nombre_archivo, '.fig']);
 
-    try
-        exportgraphics(fig, archivo_png, 'Resolution', 300);
-    catch
-        saveas(fig, archivo_png);
-    end
+    saveas(fig, archivo_png);
+    savefig(fig, archivo_fig);
+
+    fprintf('Figura PNG guardada:\n%s\n', archivo_png);
+    fprintf('Figura FIG guardada:\n%s\n', archivo_fig);
 
 end
 
