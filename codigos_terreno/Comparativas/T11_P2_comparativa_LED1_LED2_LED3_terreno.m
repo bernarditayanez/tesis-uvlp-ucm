@@ -97,30 +97,20 @@ parametros.Fs_configurada_Hz = 50e6;
 parametros.criterio_dB = 3;
 parametros.umbral_repeticiones = nRep;
 
-% Ventanas de busqueda local.
-% Periodograma se deja como busqueda local estricta para recuperar el
-% candidato del analisis individual, sin irse a maximos lejanos.
 parametros.semiancho_periodogram_Hz = 500;
 
-% Welch queda complementario. En P2 ya se habia observado que no confirma.
 parametros.semiancho_welch_Hz = 700;
 
-% Multitaper se acota a 700 Hz para evitar tomar 39.625 kHz cuando la
-% referencia del LED 2 es 40.623 kHz, pero aun permite recuperar 40.006 kHz.
 parametros.semiancho_multitaper_Hz = 700;
 
-% Ventana para revisar repetibilidad alrededor de la frecuencia evaluada.
 parametros.ventana_repetibilidad_Hz = 200;
 
-% Welch.
 parametros.Nseg_welch = 2^20;
 parametros.fraccion_solapamiento_welch = 0.50;
 
-% Multitaper.
 parametros.NW_multitaper = 2.5;
 parametros.NFFT_multitaper = 2^20;
 
-% Figuras.
 parametros.ancho_zoom_Hz = 2e3;
 
 %% 4. Configuracion de metodos
@@ -561,8 +551,6 @@ function resultado = calcular_metodo_comparativo( ...
     PSD_ON_prom_dB = mean(PSD_ON_mat_dB, 2, 'omitnan');
     PSD_OFF_prom_dB = mean(PSD_OFF_mat_dB, 2, 'omitnan');
 
-    % Misma logica usada en la etapa individual:
-    % cada repeticion ON se compara contra el OFF promedio.
     PSD_OFF_ref_dB = repmat(PSD_OFF_prom_dB, 1, nRep);
     score_mat_dB = PSD_ON_mat_dB - PSD_OFF_ref_dB;
 
@@ -1513,7 +1501,7 @@ function [t, y, Fs_estimado_Hz, N_original] = ...
     for c = 1:size(M, 2)
 
         if sum(isfinite(M(:, c))) > 10
-            columnas_validas = [columnas_validas, c]; %#ok<AGROW>
+            columnas_validas = [columnas_validas, c]; 
         end
     end
 
@@ -1588,6 +1576,9 @@ end
 
 function guardar_figura_png(fig, archivo_png)
 
+    [carpeta_archivo, nombre_archivo, ~] = fileparts(archivo_png);
+    archivo_fig = fullfile(carpeta_archivo, [nombre_archivo, '.fig']);
+
     drawnow;
 
     try
@@ -1598,6 +1589,12 @@ function guardar_figura_png(fig, archivo_png)
 
         print(fig, archivo_png, '-dpng', '-r300');
     end
+
+    savefig(fig, archivo_fig);
+
+    fprintf('Figura PNG guardada:\n%s\n', archivo_png);
+    fprintf('Figura FIG guardada:\n%s\n', archivo_fig);
+
 end
 
 function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
@@ -1606,6 +1603,9 @@ function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
         warning('La tabla esta vacia. No se guardara la figura.');
         return;
     end
+
+    [carpeta_archivo, nombre_archivo, ~] = fileparts(archivo_png);
+    archivo_fig = fullfile(carpeta_archivo, [nombre_archivo, '.fig']);
 
     datos = formatear_tabla_para_figura(tabla);
     nombres = tabla.Properties.VariableNames;
@@ -1735,6 +1735,12 @@ function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
 
     drawnow;
     print(fig, archivo_png, '-dpng', '-r300');
+
+savefig(fig, archivo_fig);
+
+fprintf('Tabla PNG guardada:\n%s\n', archivo_png);
+fprintf('Tabla FIG guardada:\n%s\n', archivo_fig);
+
 end
 
 function datos = formatear_tabla_para_figura(tabla)
