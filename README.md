@@ -26,11 +26,17 @@ Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen dire
 - `resultados_terreno/Comparativas`: tablas y figuras de las comparativas realizadas en terreno.
 - `codigos_complementarios`: códigos de apoyo metodológico y versiones descartadas documentadas.
 
-## Datos crudos
+## Datos crudos y figuras editables
 
-Los archivos CSV originales adquiridos desde el osciloscopio no se incluyen en este repositorio debido a su tamaño. Estos archivos se encuentran disponibles en:
+Los archivos `.csv` originales adquiridos desde el osciloscopio no se incluyen directamente en este repositorio debido a su tamaño. Estos datos se encuentran disponibles en la carpeta complementaria de Drive:
 
-[ENLACE_DRIVE](https://drive.google.com/drive/folders/12-3iKfvaBkIH_hp0NsVCcrXfb7bPhxMP?usp=sharing)
+**Drive de datos crudos:**  
+https://drive.google.com/drive/u/1/folders/12-3iKfvaBkIH_hp0NsVCcrXfb7bPhxMP
+
+Las figuras editables en formato `.fig` de MATLAB, junto con sus versiones `.png`, se encuentran disponibles en la siguiente carpeta complementaria:
+
+**Drive de figuras editables:**  
+https://drive.google.com/drive/u/1/folders/1AINsJb4_ADLHhj7FFFH9OWg6UuHwlGNK
 
 Para ejecutar los scripts, se deben descargar los datos crudos y modificar las variables de ruta indicadas al inicio de cada archivo MATLAB.
 
