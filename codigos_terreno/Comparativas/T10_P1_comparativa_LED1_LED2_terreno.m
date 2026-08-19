@@ -1428,6 +1428,9 @@ end
 
 function guardar_figura_png(fig, archivo_png)
 
+    [carpeta_archivo, nombre_archivo, ~] = fileparts(archivo_png);
+    archivo_fig = fullfile(carpeta_archivo, [nombre_archivo, '.fig']);
+
     drawnow;
 
     try
@@ -1445,6 +1448,12 @@ function guardar_figura_png(fig, archivo_png)
             '-dpng', ...
             '-r300');
     end
+
+    savefig(fig, archivo_fig);
+
+    fprintf('Figura PNG guardada:\n%s\n', archivo_png);
+    fprintf('Figura FIG guardada:\n%s\n', archivo_fig);
+
 end
 
 function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
@@ -1454,6 +1463,9 @@ function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
         warning('La tabla esta vacia. No se guardara la figura.');
         return;
     end
+
+    [carpeta_archivo, nombre_archivo, ~] = fileparts(archivo_png);
+    archivo_fig = fullfile(carpeta_archivo, [nombre_archivo, '.fig']);  
 
     datos = formatear_tabla_para_figura(tabla);
     nombres = tabla.Properties.VariableNames;
@@ -1581,13 +1593,19 @@ function guardar_tabla_png(tabla, titulo_tabla, archivo_png)
         end
     end
 
-    drawnow;
+drawnow;
 
-    print( ...
-        fig, ...
-        archivo_png, ...
-        '-dpng', ...
-        '-r300');
+print( ...
+    fig, ...
+    archivo_png, ...
+    '-dpng', ...
+    '-r300');
+
+savefig(fig, archivo_fig);
+
+fprintf('Tabla PNG guardada:\n%s\n', archivo_png);
+fprintf('Tabla FIG guardada:\n%s\n', archivo_fig);
+
 end
 
 function datos = formatear_tabla_para_figura(tabla)
